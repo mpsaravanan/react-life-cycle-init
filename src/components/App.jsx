@@ -7,6 +7,12 @@ class App extends Component {
       bus: "BMW"
     };
   }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log(state);
+    return { bus: props.bustype };
+  }
+
   render() {
     return <h1>Hello React!</h1>;
   }
