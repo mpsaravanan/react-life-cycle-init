@@ -8,13 +8,19 @@ class App extends Component {
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
-    console.log(state);
-    return { bus: props.bustype };
+  //   static getDerivedStateFromProps(props, state) {
+  //     console.log(state);
+  //     return { bus: props.bustype };
+  //   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ bus: "Volvo" });
+    }, 3000);
   }
 
   render() {
-    return <h1>Hello React!</h1>;
+    return <h1>Hello React! {this.state.bus}</h1>;
   }
 }
 
