@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Color from "./Color";
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,12 @@ class App extends Component {
   }
 
   render() {
-    return <h1>Hello React! {this.state.bus}</h1>;
+    return (
+      <h1>
+        Hello React! {this.state.bus}
+        <Color buscolor="Blue" />
+      </h1>
+    );
   }
 }
 
